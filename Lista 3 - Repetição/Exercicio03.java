@@ -1,7 +1,7 @@
 import java.text.DecimalFormat;
 
 import javax.swing.JOptionPane;
-
+//Da uma olhadinha na lógica desse, sempre 8 pessoas responderam ótimo
 public class Exercicio03{
     public static void main(String[] args) {
         DecimalFormat df = new DecimalFormat("#,###.00");
@@ -17,7 +17,7 @@ public class Exercicio03{
         int i = 0;
         boolean continuar = true;
 
-        while(continuar = true){
+        while(continuar = true){ //sugiro usar do-while
         for(i=0; i<10; i++){
             JOptionPane.showMessageDialog(null, "Dê sua opinião sobre o filme XXXXXXXXXXX!", "FILMES", 1);
             pessoas[i]=JOptionPane.showOptionDialog(null, "Qual a sua avaliação em relação ao filme? ", "AVALIAÇÃO", 1, 1, null, avaliacaoFilme, null);

@@ -6,13 +6,24 @@ public class Principal{
         double nota1 = 0;
         double nota2 = 0;
 
-        while(notaValida==false){
+        while(! Validacao.validarNota(nota1, nota2)){
         nota1 = EntradaSaida.solicitarNotas("1ª");
         nota2 = EntradaSaida.solicitarNotas("2ª");
-        notaValida=Validacao.validarNota(nota1,nota2);
             if(notaValida==false){
                 JOptionPane.showMessageDialog(null, "Nota inválida!", "ERRO!", 0);
             }
+/*Sugestão, após pedir as 2 notas:
+            while(! Validacao.validarNota(nota1,nota2)){
+                 nota1 = EntradaSaida.solicitarNotas("1ª");
+                nota2 = EntradaSaida.solicitarNotas("2ª");
+            }
+            APLICADO
+            antes:
+            while(notaValida==false){
+                nota1 = EntradaSaida.solicitarNotas("1ª");
+                nota2 = EntradaSaida.solicitarNotas("2ª");
+                notaValida=Validacao.validarNota(nota1,nota2);
+        */
         }
         double peso1 = EntradaSaida.solicitarPesos("1ª");
         double peso2 = EntradaSaida.solicitarPesos("2ª");
@@ -30,7 +41,7 @@ public class Principal{
                 EntradaSaida.mostrarMensagem("Operação inválida!");
             break;
         }
-        EntradaSaida.mostrarResultado(nota1, nota2, resultado, opcao);
+        Resultado.mostrarResultado(nota1, nota2, resultado, opcao);
 
     }
 }

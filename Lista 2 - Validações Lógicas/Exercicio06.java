@@ -9,7 +9,7 @@ public class Exercicio06{
         int valor = rand.nextInt((100)+1);
 
         JOptionPane.showMessageDialog(null, "Um número aleatório foi gerado, tente advinhá-lo! ", "ADVINHAÇÃO! ", 1);
-
+//sugiro usar do-while, porque a entrada uma 1ª vez é 'forçada' sempre
         while(advinhado==false && contador!=0){
             int numeroAdvinhado=Integer.parseInt(JOptionPane.showInputDialog("Digite um número de 1 até 100: "));
             if(numeroAdvinhado!=valor){

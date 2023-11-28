@@ -9,7 +9,17 @@ public class Exercicio02{
         int qtdProduto=Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade que você deseja adquirir: "));
         double resultado;
         double desconto;
-
+/*sugestao:
+ * resultado=(double)valorProduto*qtdProduto;
+ * 
+ * if(quantidade>12){
+ *     desconto=(valorProduto*0.1)*qtdProduto;
+       resultado-=desconto);
+ * 
+ * }
+ * 
+ * 
+*/
         if(qtdProduto<=12){
             resultado=(double)valorProduto*qtdProduto;
         }
@@ -17,6 +27,7 @@ public class Exercicio02{
             desconto=(valorProduto*0.1)*qtdProduto;
             resultado=(double)((valorProduto*qtdProduto)-desconto);
         }
+    
         JOptionPane.showMessageDialog(null, "O valor total da compra será de: "+df.format((double)(resultado)), "Cálculo de compras!", 1);
     }
 }
