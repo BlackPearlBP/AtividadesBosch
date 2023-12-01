@@ -14,14 +14,14 @@ public class Principal {
         switch (opcao) {
             case 1:
                 Conta c = new Conta(); //sempre precisamos criar um novo objeto conta
-                c.agencia=EntradaSaida.solicitarDadoConta("a agência");
-                c.numero=EntradaSaida.solicitarDadoConta("o número");
+                c.setAgencia(EntradaSaida.solicitarDadoConta("a agência"));
+                c.setNumero(EntradaSaida.solicitarDadoConta("o número"));
                 Pessoa p = new Pessoa();
-                p.cpf=EntradaSaida.solicitarCpf();
-                p.dataNascimento=EntradaSaida.solicitarDadoPessoa("a data de nascimento");
-                p.nome=EntradaSaida.solicitarDadoPessoa("o nome completo");
+                p.setCpf(EntradaSaida.solicitarCpf());
+                p.setDataNascimento(EntradaSaida.solicitarDadoPessoa("a data de nascimento"));
+                p.setNome(EntradaSaida.solicitarDadoPessoa("o nome completo"));
 
-                c.titular = p;
+                c.setTitular(p);
                /*  
                 System.out.println(c.agencia);
                 System.out.println(c.numero);
@@ -34,7 +34,7 @@ public class Principal {
                 b.adicionarConta(c);
             break;
             case 2:
-                if(b.listaDeContas.isEmpty()){
+                if(b.getListaDeContas().isEmpty()){
                 EntradaSaida.mostrarContas(b.listarContas());
                 }
                 else{
